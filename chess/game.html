@@ -1,0 +1,77 @@
+<html lang="ru" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+        <title>Chess</title>
+        <link rel="stylesheet" type="text/css" href="css/winmodal.css" />
+		<link rel="stylesheet" type="text/css" href="css/type_game.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+	</head>
+	<body>
+		<div class="menu">
+			<ul class="services">
+				<li><a href="#?w=400" rel="popup1" class="poplight">Create game</a></li>
+				<li><a href="#?w=400" rel="popup2" class="poplight">Play with a friend</a></li>
+				<li><a href="#?w=400" rel="popup3" class="poplight">Play with a random player</a></li>
+			</ul>
+		</div>
+
+	<div id="popup1" class="popup_block">
+		<h2>Create game</h2>
+		<h3>Game type:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie"> Internet Explorer<Br>
+			<input type="radio" name="browser" value="opera"> Opera<Br>
+			<input type="radio" name="browser" value="firefox"> Firefox<Br>
+		</p>
+		<h3>Figure color:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie">White<Br>
+			<input type="radio" name="browser" value="opera">Black<Br>
+			<input type="radio" name="browser" value="firefox">Random<Br>
+		</p>
+		<input type="button" id="create_game" value="Create game" />
+	</div>
+	
+	<div id="popup2" class="popup_block">
+		<h2>Play with a friend</h2>
+		<h3>Users:</h3>
+		<select>
+			<option>User 1</option>
+			<option>User 2</option>
+		</select>
+		<h3>Game type:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie"> Internet Explorer<Br>
+			<input type="radio" name="browser" value="opera"> Opera<Br>
+			<input type="radio" name="browser" value="firefox"> Firefox<Br>
+		</p>
+		<h3>Figure color:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie">White<Br>
+			<input type="radio" name="browser" value="opera">Black<Br>
+			<input type="radio" name="browser" value="firefox">Random<Br>
+		</p>
+		<input type="button" id="create_game_friend" value="Create game" />
+	</div>
+	
+	<div id="popup3" class="popup_block">
+		<h2>Play with a random player</h2>
+		<h3>Game type:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie"> Internet Explorer<Br>
+			<input type="radio" name="browser" value="opera"> Opera<Br>
+			<input type="radio" name="browser" value="firefox"> Firefox<Br>
+		</p>
+		<h3>Figure color:</h3>
+		<p>
+			<input type="radio" name="browser" value="ie">White<Br>
+			<input type="radio" name="browser" value="opera">Black<Br>
+			<input type="radio" name="browser" value="firefox">Random<Br>
+		</p>
+		<input type="button" id="create_game_random" value="Create game" />
+	</div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/dm-modal.js"></script>
+</body>
+</html>

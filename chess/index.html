@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Chess</title>
+		<link rel="stylesheet" href="css/chessboard.css" />
+		<link rel="stylesheet" href="css/common.css" />
+	</head>
+	<body>
+		<div class="content">
+			<!--side box padded-->
+			<div class="site_header"> 
+				<div class="side">
+					<div class="side_box padded">
+						<div class="game_infos">
+							<div class="header">
+								<span class="setup">
+									<p>CLASSICAL</p>
+									<p> + not rating </p>
+								</span>
+								<p>activ partia</p>
+							</div>  
+						</div>
+						<div class="players">  
+							<div class="player_color_icon_is_white">
+								<span class="user_link">Alexandr.</span>
+							</div>
+							<div class="player_color_icon_is_black">
+								<span class="user_link">Ekaterina.</span>
+							</div> 
+						</div>  
+					</div>
+				</div>
+				<!--This is chat menu-->
+				<div class="chat_menu">
+					<a class="messages_container" class="active">
+						Window chat
+						<input title="show chat" class="toggle_chat" type="checkbox" />
+					</a>
+				</div>
+				<div class="chat">
+					<div class="chat_panel">
+					</div>
+				</div>
+			</div>
+			
+			<!--chess board-->
+			<div class="chess_board">
+				<div class="chess_game">
+					<div class="eliminated_user1_pieces">
+						<p>Eliminated figure:</p>
+					</div>
+					<div id="board"></div>
+					<div class="eliminated_user2_pieces">
+						<p>Eliminated figure:</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--chess status, FEN, PGN etc-->
+			<div class="chess_information">
+				<div class="chess_time_usr2"> 
+					Time: <span id="chess_time"></span>
+				</div >
+				<div class="chess_ground">
+					<p class="status">Status: <span id="status"></span></p>
+					<div class="pgn">
+						<p>PGN: <span id="pgn"></span></p>
+					</div>
+					<div class="end_game">
+						<a id="surrender" data-title="Surrender" href="#"></a>
+						<a id="suggest_a_draw" data-title="Suggest a draw" href="#"></a>
+					</div>
+					<a id="toggler" href="#">Setting</a>
+					<div id="box">
+						<div class="user_button">
+							<input type="button" id="flipOrientationBtn" value="Flip orientation" />
+						</div>
+						<div class="fen">
+							<span id="fen"></span>
+						</div>
+					</div>
+				</div>
+				<div class="chess_time_usr1"> 
+					Time: <span id="chess_time"></span>
+				</div >
+			</div>
+		</div>
+		
+		<div style="clear: both;"></div>
+		<!--connection script-->
+		<script src="js/chess.js"></script>
+		<script src="js/json3.min.js"></script>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/chessboard.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
