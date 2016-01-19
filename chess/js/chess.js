@@ -1257,8 +1257,9 @@ window['Chess'] = window['Chess'] || function(fen) {
       var pgn_move_number = 1;
 
       /* build the list of moves.  a move_string looks like: "3. e3 e6" */
-	    while (reversed_history.length > 0) {
+      while (reversed_history.length > 0) {
         var move = reversed_history.pop();
+
         /* if the position started with black to move, start PGN with 1. ... */
         if (pgn_move_number === 1 && move.color === 'b') {
           move_string = '1. ...';
@@ -1268,17 +1269,14 @@ window['Chess'] = window['Chess'] || function(fen) {
           if (move_string.length) {
             moves.push(move_string);
           }
-          //move_string = pgn_move_number + '.';
-		  //move_string = '</li><li>' + pgn_move_number + ')';
-          var dt_move = [make_pretty(move).from + '-' + make_pretty(move).to];
-          var temp = reversed_history.slice(-1);
-          if(temp.length) dt_move.push(make_pretty(temp[0]).from + '-' + make_pretty(temp[0]).to);
-		  move_string = '</a>'+pgn_move_number + '.'+'<a href="#" data-move="'+dt_move+'">';
+          move_string = pgn_move_number + '.';
           pgn_move_number++;
         }
+
         move_string = move_string + ' ' + move_to_san(move);
         make_move(move);
       }
+
       /* are there any other leftover moves? */
       if (move_string.length) {
         moves.push(move_string);
